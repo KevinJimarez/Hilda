@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Construir con Maven",
+      "type": "shell",
+      "command": "mvn clean package",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$javac"]
+    },
+    {
+      "label": "2. Ejecutar el JAR",
+      "type": "shell",
+      "command": "java -jar target/cafeteria-1.0-SNAPSHOT.jar",
+      "dependsOn": "1. Construir con Maven",
+      "problemMatcher": []
+    }
+  ]
+}
